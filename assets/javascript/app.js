@@ -1,1 +1,1 @@
-alert("this is a test");
+setInterval(function(){ alert("Hello"); }, 3000);
