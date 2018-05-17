@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Piedra" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -12,34 +13,116 @@
 </head>
 
 <body>
-   <div class="container">
-       <!-- create the first row for the timer to live in -->
-       <div class="row">
-           <div class="col-md-12">
-               <h1>Time remaining: <span id="time-remaining"></span></h1>
-           </div>
-       </div>
-       <!-- create a new row for your first question -->
-       <div class="row">
-           <div class="col-md-6">
+    <div class="container">
+        <!-- create the first row for the timer to live in -->
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Time remaining:
+                    <span id="time-remaining"></span>
+                </h1>
+            </div>
+        </div>
+        <!-- create a new row for your first question -->
+        <div class="row">
+            <div class="col-md-7">
                 <h2>What color bandana did all the Teenage Mutant Ninja Turtles originally wear?</h2>
-                <input type="radio" name="bandana" value="purple"> purple <input type="radio" name="bandana" value="blue"> blue <input type="radio" name="bandana" value="red"> red <input type="radio" name="bandana" value="orange"> orange
-           </div>
-       </div>
-       <!-- create the new row for second question -->
-       <div class="row">
-            <div class="col-md-6">
-                 <h2>What is Shredders real name?</h2>
-                 <input type="radio" name="shredder" value="eric-sacks"> Eric Sacks <input type="radio" name="shredder" value="oroku-saki"> Oroku Saki <input type="radio" name="shredder" value="shredder"> Shredder <input type="radio" name="shredder" value="hamato-yoshi"> Hamato Yoshi
+                <input class="question1" type="radio" name="bandana" value="purple"> Purple
+                <input class="question1" type="radio" name="bandana" value="blue"> Blue
+                <input class="question1" type="radio" name="bandana" value="red"> Red
+                <input class="question1" type="radio" name="bandana" value="orange"> Orange
+            </div>
+        </div>
+        <!-- create the new row for second question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What is Shredders real name?</h2>
+                <input class="question2" type="radio" name="shredder" value="eric-sacks"> Eric Sacks
+                <input class="question2" type="radio" name="shredder" value="oroku-saki"> Oroku Saki
+                <input class="question2" type="radio" name="shredder" value="shredder"> Shredder
+                <input class="question2" type="radio" name="shredder" value="hamato-yoshi"> Hamato Yoshi
             </div>
         </div>
         <!-- create new row for the third question -->
-        <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-7">
                 <h2>What is Splinters real name?</h2>
-                <input type="radio" name="splinter" value="splinter"> Splinter <input type="radio" name="splinter" value="oroku-saki"> Oroku Saki <input type="radio" name="splinter" value="hamato-yoshi"> Homato Yoshi <input type="radio" name="splinter" value="eric-sacks"> Erick Sacks
-           </div>
-       </div>
-   </div>
+                <input class="question3" type="radio" name="splinter" value="splinter"> Splinter
+                <input class="question3" type="radio" name="splinter" value="oroku-saki"> Oroku Saki
+                <input class="question3" type="radio" name="splinter" value="hamato-yoshi"> Homato Yoshi
+                <input class="question3" type="radio" name="splinter" value="eric-sacks"> Erick Sacks
+            </div>
+        </div>
+        <!-- create new row for the fourth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What was April O'neil's first job?</h2>
+                <input class="question4" type="radio" name="april-job" value="pizza-delivery"> Pizza Delivery
+                <input class="question4" type="radio" name="april-job" value="reporter"> Reporter
+                <input class="question4" type="radio" name="april-job" value="scientist"> Scientist
+                <input class="question4" type="radio" name="april-job" value="receptionist"> Receptionist
+            </div>
+        </div>
+        <!-- create new row for the fifth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What is the name of Shredder's adopted daughter?</h2>
+                <input class="question5" type="radio" name="karai" value="april-oneil"> April O'neil
+                <input class="question5" type="radio" name="karai" value="renet"> Renet
+                <input class="question5" type="radio" name="karai" value="mona-lisa"> Mona Lisa
+                <input class="question5" type="radio" name="karai" value="karai"> Karai
+            </div>
+        </div>
+        <!-- create new row for the sixth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What is the name of the only female Ninja Turtle?</h2>
+                <input class="question6" type="radio" name="venus" value="venus"> Venus
+                <input class="question6" type="radio" name="venus" value="april-oneil"> April O'neil
+                <input class="question6" type="radio" name="venus" value="karai"> Karai
+                <input class="question6" type="radio" name="venus" value="mona-lisa"> Mona Lisa
+            </div>
+        </div>
+        <!-- create new row for the seventh question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Who is Raphael's love interest?</h2>
+                <input class="question7" type="radio" name="mona-lisa" value="renet"> Renet
+                <input class="question7" type="radio" name="mona-lisa" value="venus"> Venus
+                <input class="question7" type="radio" name="mona-lisa" value="mona-lisa"> Mona Lisa
+                <input class="question7" type="radio" name="mona-lisa" value="karai"> Karai
+            </div>
+        </div>
+        <!-- create new row for the eigth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What is Casey Jones's weapon of choice?</h2>
+                <input class="question8" type="radio" name="casey-jones" value="sports-equipment"> Sports Equipment
+                <input class="question8" type="radio" name="casey-jones" value="swords"> Swords
+                <input class="question8" type="radio" name="casey-jones" value="guns"> Guns
+                <input class="question8" type="radio" name="casey-jones" value="batons"> Batons
+            </div>
+        </div>
+        <!-- create new row for the ninth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>What name does Professor Zayton Honeycutt take in cyborg form?</h2>
+                <input class="question9" type="radio" name="fugitoid" value="chrome-dome"> Chrome-Dome
+                <input class="question9" type="radio" name="fugitoid" value="metal-head"> Metal Head
+                <input class="question9" type="radio" name="fugitoid" value="fugitoid"> Fugitoid
+                <input class="question9" type="radio" name="fugitoid" value="mecha-shredder"> Mecha-Shredder
+            </div>
+        </div>
+        <!-- create new row for the tenth question -->
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Who is Renet?</h2>
+                <input class="question10" type="radio" name="renet" value="time-master"> A Time Master
+                <input class="question10" type="radio" name="renet" value="aprils-friend"> April's friend
+                <input class="question10" type="radio" name="renet" value="shredders-daughter"> Shredder's Daughter
+                <input class="question10" type="radio" name="renet" value="raphaels-love"> Raphael's Love Interest
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

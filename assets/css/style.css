@@ -1,0 +1,16 @@
+body {
+    background: url("../.././assets/images/tmnt_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col-md-7 {
+    background-color: green;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-family: 'Piedra', cursive;
+    color: #f2d70c
+}
