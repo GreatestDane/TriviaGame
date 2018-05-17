@@ -1,6 +1,5 @@
 var gameOver = false;
-var count=120;
-var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+var count=60;
 var answersCorrect = 0;
 var answersWrong = 0;
 var answer1;
@@ -13,6 +12,11 @@ var answer7;
 var answer8;
 var answer9;
 var answer10;
+
+//initialize game hiding
+$("#container2").hide();
+//initialize game over results hiding
+$("#container3").hide();
 
 //Create the object for the answers
 
@@ -29,8 +33,27 @@ var answers = {
   answer10: "time-master"
 }
 
+// Game End Function
 
+function gameEnd() {
+  $("#container2").hide();
+  $("#container3").show();
+  $("#answers-correct").text(answersCorrect);
+  $("#answers-wrong").text(answersWrong);
+  $("#time-left").text(count);
+}
+
+// Make it so when you press the start button the game begins and the counter begins
+$("#start-button").on("click", function(){
+
+  //hide the start menu
+  $("#container1").hide();
+  //show the game
+  $("#container2").show();
+
+  var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 //Create the countdown function
+//If countdown ends, the game is over
  function timer() {
   count --;
   $("#time-remaining").html(count);
@@ -41,13 +64,20 @@ var answers = {
     gameOver = true;
   }
   if (gameOver === true) {
-    alert("game over!");
-  }
+    gameEnd();
+  };
 };
 
-if (gameOver === true) {
-  alert("game over!");
-};
+// if the submit button is pressed, the game is over
+$("#submit-button").on("click", function() {
+  gameOver = true;
+  if (gameOver === true) {
+    gameEnd();
+    gameOver = false;
+  };
+});
+
+
 
 // Game logic and onclick functions
 // question 1
@@ -55,11 +85,9 @@ $(".question1").on("click", function() {
   answer1 = $(this).attr("value");
   if (answer1 === answers.answer1) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -68,11 +96,9 @@ $(".question2").on("click", function() {
   answer2 = $(this).attr("value");
   if (answer2 === answers.answer2) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -81,11 +107,9 @@ $(".question3").on("click", function() {
   answer3 = $(this).attr("value");
   if (answer3 === answers.answer3) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -94,11 +118,9 @@ $(".question4").on("click", function() {
   answer4 = $(this).attr("value");
   if (answer4 === answers.answer4) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -107,11 +129,9 @@ $(".question5").on("click", function() {
   answer5 = $(this).attr("value");
   if (answer5 === answers.answer5) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -120,11 +140,9 @@ $(".question6").on("click", function() {
   answer6 = $(this).attr("value");
   if (answer6 === answers.answer6) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -133,11 +151,9 @@ $(".question7").on("click", function() {
   answer7 = $(this).attr("value");
   if (answer7 === answers.answer7) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -146,11 +162,9 @@ $(".question8").on("click", function() {
   answer8 = $(this).attr("value");
   if (answer8 === answers.answer8) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -159,11 +173,9 @@ $(".question9").on("click", function() {
   answer9 = $(this).attr("value");
   if (answer9 === answers.answer9) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
 });
 
@@ -172,10 +184,10 @@ $(".question10").on("click", function() {
   answer10 = $(this).attr("value");
   if (answer10 === answers.answer10) {
     answersCorrect ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
   else {
     answersWrong ++;
-    alert("Answers correct " + answersCorrect + " Answers Wrong " + answersWrong);
   }
+});
+
 });
